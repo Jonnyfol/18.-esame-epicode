@@ -1,0 +1,105 @@
+.back-black {
+    background-color: #000 !important; 
+}
+.white{
+    color: white !important; 
+}
+
+.dimensionlogo{
+    height: 30px;
+    width: 80px;
+}
+.img-logo{
+    width: 30px; 
+    height: 30px; 
+    object-fit: cover;
+}
+.bor{
+    border-radius: 0px;
+}
+
+/* spostamento carosello */
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(16%);
+    }
+
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-16%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+    transform: translateX(0) ;
+    background-color: #000;
+}
+.carousel-inner:hover {
+    overflow: visible;
+    
+}
+
+
+/* ingrandimento */
+.card:hover {
+    position: relative;
+    /* overflow: hidden; */
+    transition:  0.8s ease-in-out;
+    
+}
+
+.card:hover {
+    z-index: 1;
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+
+/* sezione per opacity allo scroll */
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 200px; 
+    width: 100%;
+    opacity: 0;
+    transition: opacity 5s ease-out;
+  }
+  
+  .item:nth-of-type(odd) {
+    background-color: black;
+  }
+  
+  .item:nth-of-type(even) {
+    background-color: black;
+  }
+  
+  .item.show {
+    opacity: 1;
+  }
+/* cambiato colore dell'evidenziatore al dropdown menù */
+  .dropdown-menu a:hover {
+    background-color: #bd1212; 
+}  
+
+

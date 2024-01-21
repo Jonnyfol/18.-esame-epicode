@@ -1,0 +1,496 @@
+<!-- ciao Alessandro, ti metto qui i commenti con gli extra che ho fatto per essere più chiari
+1. l'extra richiesto
+2. ho aggiunto il dropdown agli elementi Genres e all'immagine del profilo, con evidenziatura modificata di rosso per una maggiore visibilità
+3. ho aggiunto un collapse ad ogni sezione di scorrimento con delle frecce che sono appena sotto il titolo
+4. aggiunta di modale a fondo pagina per un contatto -->
+
+
+
+<!-- piccolo mal funzionamento: in pratica quando uso l'ispector mi da qualche problema quando torno da schermo piccolo a schermo grande
+questo scherzo lo fa solo sull'ispector, mentre se lo faccio nel metodo "barbaro" quindi ristringendo la pagina per intero non crea problemi
+io ho provato a sistemarlo, ma proprio non ci sono riuscito, a sto punto penso mi viene da pensare che sia proprio colpa dell'ispector perchè sto impazzendo
+lo consegno così perchè non ho più idee. in sè è responsive, solo non sull'ispector, o meglio quando scringo si, quando allargo manda tutto a quel paese
+detto questo buon lavoro e buona continuazione -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5fbb1a25ce.js" crossorigin="anonymous"></script>
+    <title>Replica Netflix</title>
+</head>
+
+<body class="back-black container-fluid">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light back-black">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="dimensionlogo" src="Netflix_Logo_RGB.png"
+                    alt="logo-di-netflix"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active white" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold white" href="#">TV Shows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link white" href="#">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link white" href="#">Recently Added</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link white" href="#">My List</a>
+                    </li>
+                </ul>
+
+
+                <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-magnifying-glass white me-3"></i>
+                    <a class="nav-link white" href="#">KIDS</a>
+                    <i class="fa-solid fa-bell white me-3"></i>
+
+
+                    <div class="dropdown">
+                        <button class="btn btn-dark border-0 back-black" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="utente.avif" class="img-logo" alt="img-utente">
+                            <i class="fa-solid fa-caret-down white me-2"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end back-black text-white">
+                            <a class="dropdown-item  white" href="#">Informazioni utente</a>
+                            <a class="dropdown-item  white" href="#">Stato abbonamento</a>
+                            <a class="dropdown-item white " href="#">Info Privacy</a>
+                            <a class="dropdown-item  white" href="#">Esci</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <!-- intestazione  -->
+    <div class="container-fluid d-flex justify-content-between mt-3">
+        <div class="d-flex align-items-center">
+            <h2 class="white mx-2">TV Shows</h2>
+
+            <div class="dropdown mx-5">
+                <button class="btn btn-secondary dropdown-toggle back-black bor" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Genres
+                </button>
+                <ul class="dropdown-menu back-black ">
+                    <li><a class="dropdown-item white" href="#">Action</a></li>
+                    <li><a class="dropdown-item white" href="#">Adventure</a></li>
+                    <li><a class="dropdown-item white" href="#">Crime</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center ">
+            <i class="fa-solid fa-grip-lines white p-2 border border-2"></i>
+            <i class="fa-solid fa-grip white p-2 border"></i>
+           
+        </div>
+    </div>
+
+    <!-- carosello -->
+    <div class="container-fluid ">
+        <h4 class=" container-fluid white mt-5">Trending Now
+            <button class="btn btn-link accordion-button back-black" type="button" data-bs-toggle="collapse"
+            data-bs-target="#trending-carousel1" aria-expanded="true" aria-controls="trending-carousel">
+            <i class="fas fa-chevron-up"></i>
+            </h4>
+
+            <div class="collapse show" id="trending-carousel1">
+        <div class="row item res">
+            <div id="recipeCarousel1" class="carousel slide" >
+                <div class="carousel-inner res" role="listbox">
+                    <div class="carousel-item active ">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="1.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1 ">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="2.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="3.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class=" col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="4.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="5.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="6.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-auto" href="#recipeCarousel1" role="button"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-auto" href="#recipeCarousel1" role="button"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    <!-- secondo carosello -->
+    <div class="container-fluid ">
+        <h4 class=" container-fluid white mt-5">Watch It Again
+            <button class="btn btn-link accordion-button back-black" type="button" data-bs-toggle="collapse"
+            data-bs-target="#trending-carousel2" aria-expanded="true" aria-controls="trending-carousel">
+            <i class="fas fa-chevron-up"></i>
+        </h4>
+
+        <div class="collapse show" id="trending-carousel2">
+        <div class="row item res">
+            <div id="recipeCarousel2" class="carousel slide" >
+                <div class="carousel-inner " role="listbox">
+                    <div class="carousel-item active ">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="7.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1 ">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="8.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="9.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="10.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="11.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="12.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-auto" href="#recipeCarousel2" role="button"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-auto" href="#recipeCarousel2" role="button"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <!-- terzo carosello -->
+
+
+
+    <div class="container-fluid ">
+        <h4 class=" container-fluid white mt-5">
+        New Relases
+        <button class="btn btn-link accordion-button back-black" type="button" data-bs-toggle="collapse"
+        data-bs-target="#trending-carousel3" aria-expanded="true" aria-controls="trending-carousel">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+</h4>
+        
+
+        <div class="collapse show" id="trending-carousel3">
+        <div class="row item res">
+            <div id="recipeCarousel3" class="carousel slide">
+                <div class="carousel-inner " role="listbox">
+                    <div class="carousel-item active ">
+                        <div class=" col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1 netflix">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="13.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class=" col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1 netflix ">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="14.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1 netflix">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="15.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1 netflix">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="16.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1 netflix">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="17.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12 mx-1 netflix">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="18.png" class="img-fluid w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-auto" href="#recipeCarousel3" role="button"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-auto" href="#recipeCarousel3" role="button"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- footer -->
+    <footer>
+        <div class="container mt-5">
+            <div>
+                <i class="fa-brands fa-facebook text-secondary fs-3 me-2"></i>
+                <i class="fa-brands fa-instagram text-secondary fs-3 mx-2"></i>
+                <i class="fa-brands fa-twitter text-secondary fs-3 mx-2"></i>
+                <i class="fa-brands fa-youtube text-secondary fs-3 mx-2"></i>
+            </div>
+            <div class="d-flex justify-content-between mt-3">
+                <div class="text-secondary">
+                    <p> Audio and Subtitles</p>
+                    <p>Media Center</p>
+                    <p>Privacy</p>
+                    <p>Contact Us</p>
+                </div>
+                <div class="text-secondary">
+                    <p>Audio Description</p>
+                    <p>Investor Relations</p>
+                    <p>Legal Notices</p>
+                </div>
+                <div class="text-secondary">
+                    <p>Help Center</p>
+                    <p>Jobs</p>
+                    <p>Cookie Preferences</p>
+                </div>
+                <div class="text-secondary">
+                    <p>Gift Cards</p>
+                    <p>Terms of Use</p>
+                    <p>Corporare Information</p>
+                </div>
+            </div>
+
+            <div class="text-secondary my-3">
+                <span class="border border-secondary p-1 ">Service Code</span>
+  </div>
+
+
+
+            <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            data-bs-whatever="expedia@ggmail">contattaci</button>
+    
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label">Recipient:</label>
+                      <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="mb-3">
+                      <label for="message-text" class="col-form-label">Message:</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Send message</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+            <div>
+                <p class="fs-6 text-secondary">@ 1977-2019 Netflix, Inc. {i-ooo}</p>
+            </div>
+
+
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="java.js"></script>
+
+</body>
+
+</html>
+
+
+<!-- 
+<button class="btn btn-link accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#Reccommended-section" aria-expanded="true" aria-controls="offer-section">
+                <i class="fas fa-chevron-up"></i>
+            </button> -->
